@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <ol>
+        {% for link in doc_list %}
+        <li>
+            <a href="/news/{{link[0]}}"><h3>{{ link[1] }}</h3></a>
+            <p>
+                <small>{{ link[2] }}</small>
+            </p>
+            <p>{{ link[3][:100] }}...</p>
+            {% if not loop.last %}
+            <hr style="border-top: 1px solid #ccc; margin: 20px 0;">
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+
+
+{% endblock %}

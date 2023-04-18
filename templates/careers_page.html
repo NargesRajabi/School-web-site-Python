@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="wrapper">
+ <div class="container">
+     <h3>Career:</h3>
+    <ol>
+        {% for item in data %}
+               <li>
+                   <a href="{{ item['link'] }}">
+                       <h5>{{ item['title'] }}</h5>
+                   </a>
+                   {% if not loop.last %}
+                   <hr style="border-top: 1px solid #ccc; margin: 20px 0;">
+                   {% endif %}
+               </li>
+        {% endfor %}
+    </ol>
+</div>
+</div>
+
+{% endblock %}

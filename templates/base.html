@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% block head %}
+    <title>{% block title %}Trans Web App{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+          crossorigin="anonymous">
+    <style>
+    html,
+    body {
+      height: 100%;
+      margin-top:30px;
+    }
+
+    .wrapper {
+      min-height: 100%;
+      margin-bottom: -220px;
+    }
+
+    h1, h2,h3,h4  {
+       margin-bottom: 20px;
+       margin-top: 20px;
+    }
+
+    .footer{
+      height: 220px;
+    }
+    </style>
+    {% endblock %}
+
+</head>
+<body>
+{% block navbar %}
+<nav id="header" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/careers">Careers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/news">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/info">Information</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+<br>
+{% block content %}
+{% endblock %}
+{% block footer %}
+<footer class="bg-dark text-white py-3 footer " style="bottom:0;">
+    <div class="container">
+        <p>
+            <strong>For general inquiries, please contact us at:</strong>
+            <br>
+            École Hampstead School
+            83 Thurlow Road
+            Hampstead, QC H3X 3G8
+            <br>
+            <strong>Phone:</strong> 514-486-6758
+            <strong>Fax:</strong> 514-486-7102
+            <strong>Email:</strong> hampstead@emsb.qc.ca
+            <br>
+            <strong>Office Hours:</strong> 7:30 a.m. to 3:30 p.m.
+            <br>
+            For daycare services, please contact:
+            Ms. Cathy Agnello, Daycare Technician
+            BASE Daycare Program
+            <br>
+            <strong>Phone:</strong> 514-788-0025
+            <strong>Daycare:</strong> 7:00 a.m. to 6:00 p.m.
+           <br>
+        <p>
+            <img src="/static/images/logo.jpg" alt="Footer Image" width="25">
+            Copyright © 2023 All rights reserved</p>
+        </p>
+    </div>
+</footer>
+{% endblock %}
+
+</body>
+</html>
